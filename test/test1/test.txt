@@ -1,0 +1,18 @@
+Hero{
+	heroId:int
+	hp:int
+	attack:int
+}
+
+// sdns
+EnterGameReq{
+	userId1:int // sd
+	openId:string
+	heros:[]Hero
+	timeStamp:int64
+	flag:[]int
+}
+
+EnterGameAck{
+	
+}
