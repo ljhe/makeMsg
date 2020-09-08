@@ -144,7 +144,7 @@ func (this *MakeMsg) WriteMsg(content, readPath, baseWritePath, completeWritePat
 	if err != nil {
 		return fmt.Errorf("WriteMsg|os.Mkdir is err:%v", err)
 	}
-	fw, err := os.OpenFile(completeWritePath+"\\"+slice[0]+".go", os.O_RDWR|os.O_CREATE, 0644)
+	fw, err := os.OpenFile(completeWritePath+"\\"+slice[0]+".go", os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0644)
 	if err != nil {
 		return fmt.Errorf("WriteMsg|OpenFile is err:%v", err)
 	}
